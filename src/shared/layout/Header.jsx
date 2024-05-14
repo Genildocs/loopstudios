@@ -1,26 +1,26 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { useMediaQuery } from '@uidotdev/usehooks';
-import iconHamburguer from '../../assets/icon-hamburger.svg';
-import iconClose from '../../assets/icon-close.svg';
-import Menu from '../components/Menu';
-import Logo from '../../assets/logo.svg';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useMediaQuery } from "@uidotdev/usehooks";
+import iconHamburguer from "../../assets/icon-hamburger.svg";
+import iconClose from "../../assets/icon-close.svg";
+import Menu from "../components/Menu";
+import Logo from "../../assets/logo.svg";
 
 export default function Header() {
-  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const [open, setOpen] = useState(false);
 
   const varianst = {
     open: {
-      position: 'absolute',
-      backgroundColor: 'black',
-      minHeight: '100vh',
-      width: '100%',
-      overflow: 'hidden',
+      position: "absolute",
+      backgroundColor: "black",
+      minHeight: "100vh",
+      width: "100%",
+      overflow: "hidden",
     },
     closed: {
-      position: 'relative',
-      width: '100%',
+      position: "relative",
+      width: "100%",
     },
   };
   const menuToggle = () => {
@@ -31,9 +31,11 @@ export default function Header() {
     <div className="header-container">
       <motion.div
         className=" pt-6 pl-6 pr-6 menu-container"
-        animate={open ? 'open' : 'closed'}
+        initial="closed"
+        animate={open ? "open" : "closed"}
         transition={{ duration: 1 }}
-        variants={varianst}>
+        variants={varianst}
+      >
         <div className="flex justify-between">
           <div>
             <img src={Logo} alt="logotipo" className="w-[150px]" />
@@ -44,12 +46,12 @@ export default function Header() {
                 <motion.img
                   src={iconHamburguer}
                   alt="menu"
-                  className={open ? 'hidden' : 'visible '}
+                  className={`${open ? " hidden " : " visible "}  `}
                 />
                 <motion.img
                   src={iconClose}
                   alt="menu"
-                  className={open ? 'visible ' : 'hidden'}
+                  className={`${open ? " visible " : " hidden "}`}
                 />
               </button>
             </div>
@@ -57,6 +59,13 @@ export default function Header() {
           <Menu isMobile={isMobile} open={open} />
         </div>
       </motion.div>
+      <div className="pl-6 pr-6 pt-20 pb-20">
+        <div className="header-text">
+          <h1 className="uppercase text-white">
+            Immersive Experiences that deliver
+          </h1>
+        </div>
+      </div>
     </div>
   );
 }

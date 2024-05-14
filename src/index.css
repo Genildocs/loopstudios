@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 /* font-family: "Alata", sans-serif;
  */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 /* font-family: "Josefin Sans", sans-serif; */
 
 @tailwind base;
@@ -10,10 +10,10 @@
 
 .header-container {
   position: relative;
-  background-image: url('../src/assets/desktop/image-hero.jpg');
+  background-image: url("../src/assets/desktop/image-hero.jpg");
   background-size: cover;
   @media (max-width: 768px) {
-    background-image: url('../src/assets/mobile/image-hero.jpg');
+    background-image: url("../src/assets/mobile/image-hero.jpg");
   }
   background-repeat: no-repeat;
 }
@@ -21,5 +21,10 @@
 ul li {
   text-transform: uppercase;
   color: white;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.header-text {
+  border: 2px solid white;
 }
