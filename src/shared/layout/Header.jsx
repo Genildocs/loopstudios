@@ -1,71 +1,30 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { useMediaQuery } from "@uidotdev/usehooks";
-import iconHamburguer from "../../assets/icon-hamburger.svg";
-import iconClose from "../../assets/icon-close.svg";
-import Menu from "../components/Menu";
-import Logo from "../../assets/logo.svg";
-
+import { motion, useCycle } from 'framer-motion';
+import Menu from '../components/Menu';
+import Logo from '../../assets/logo.svg';
+import BtnToggleHeader from '../components/BtnToggleHeader';
 export default function Header() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
-  const [open, setOpen] = useState(false);
-
-  const varianst = {
-    open: {
-      position: "absolute",
-      backgroundColor: "black",
-      minHeight: "100vh",
-      width: "100%",
-      overflow: "hidden",
-    },
-    closed: {
-      position: "relative",
-      width: "100%",
-    },
-  };
-  const menuToggle = () => {
-    setOpen(!open);
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  console.log(isOpen);
+  const variants = {
+    open: { width: '100%', transition: { duration: 0.5 } },
+    closed: { width: '0%' },
   };
 
   return (
-    <div className="header-container">
-      <motion.div
-        className=" pt-6 pl-6 pr-6 menu-container"
-        initial="closed"
-        animate={open ? "open" : "closed"}
-        transition={{ duration: 1 }}
-        variants={varianst}
-      >
-        <div className="flex justify-between">
-          <div>
-            <img src={Logo} alt="logotipo" className="w-[150px]" />
-          </div>
-          {isMobile && (
-            <div>
-              <button onClick={menuToggle}>
-                <motion.img
-                  src={iconHamburguer}
-                  alt="menu"
-                  className={`${open ? " hidden " : " visible "}  `}
-                />
-                <motion.img
-                  src={iconClose}
-                  alt="menu"
-                  className={`${open ? " visible " : " hidden "}`}
-                />
-              </button>
-            </div>
-          )}
-          <Menu isMobile={isMobile} open={open} />
+    <motion.header
+      className="header-container flex justify-between items-center "
+      initial={false}
+      animate={isOpen ? 'open' : 'closed'}>
+      <motion.div className="flex justify-between items-center flex-1 py-8 px-4">
+        <div className="h-[32px]">
+          <img src={Logo} alt="logo" className="absolute  z-50" />
         </div>
+        <motion.div
+          className="absolute top-0 bottom-0 left-0 bg-black z-10"
+          variants={variants}></motion.div>
+        <BtnToggleHeader toggle={toggleOpen} />
       </motion.div>
-      <div className="pl-6 pr-6 pt-20 pb-20">
-        <div className="header-text">
-          <h1 className="uppercase text-white">
-            Immersive Experiences that deliver
-          </h1>
-        </div>
-      </div>
-    </div>
+      <Menu />
+    </motion.header>
   );
 }

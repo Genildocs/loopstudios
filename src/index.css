@@ -1,30 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 /* font-family: "Alata", sans-serif;
  */
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 /* font-family: "Josefin Sans", sans-serif; */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.header-container {
-  position: relative;
-  background-image: url("../src/assets/desktop/image-hero.jpg");
-  background-size: cover;
-  @media (max-width: 768px) {
-    background-image: url("../src/assets/mobile/image-hero.jpg");
-  }
-  background-repeat: no-repeat;
+body {
+  overflow: hidden;
 }
 
-ul li {
-  text-transform: uppercase;
-  color: white;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
+.header-container {
+  background-image: url('../src/assets/desktop/image-hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    background-image: url('../src/assets/mobile/image-hero.jpg');
+  }
+}
+
+/* .menu-container {
+  transition: all 0.8s ease-in-out;
+}
+
+.menu-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: black;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .header-text {
   border: 2px solid white;
+} */
+
+ul li {
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
 }
