@@ -1,10 +1,10 @@
-import img from '../../assets/mobile/image-deep-earth.jpg';
+import Earth from '../../assets/mobile/image-deep-earth.jpg';
 export default function SectionTwo({ isDevice }) {
   const gallery = [
     {
       source: {
-        mobile: '../../assets/mobile/image-deep-earth.jpg',
-        desktop: '../../assets/desktop/image-deep-earth.jpg',
+        mobile: 'src/assets/mobile/image-deep-earth.jpg',
+        desktop: 'src/assets/desktop/image-deep-earth.jpg',
       },
       name: 'deep earth',
       alt: 'Earth',
@@ -58,6 +58,7 @@ export default function SectionTwo({ isDevice }) {
       alt: 'fisheye',
     },
   ];
+  console.log(gallery);
   return (
     <section className=" mb-20">
       <div>
