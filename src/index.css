@@ -9,17 +9,17 @@
 @tailwind utilities;
 
 body {
-  overflow: hidden;
   min-height: 100vh;
-  background: orchid;
 }
 
 .header-container {
   background-image: url('../src/assets/desktop/image-hero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+
   @media (max-width: 768px) {
     background-image: url('../src/assets/mobile/image-hero.jpg');
+    min-height: 100vh;
   }
 }
 

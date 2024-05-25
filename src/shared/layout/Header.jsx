@@ -35,7 +35,7 @@ export default function Header({ isMobile }) {
       </motion.div>
       <div className="pb-10 px-4">
         <div className="border-4 border-white border-solid p-5 mt-3 ">
-          <h1 className="text-white text-5xl uppercase">
+          <h1 className="text-white font-josefin text-[2.8rem] uppercase tracking-wide">
             Immersive experiences that deliver
           </h1>
         </div>
