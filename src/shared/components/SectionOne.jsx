@@ -2,8 +2,8 @@ import image_1 from '../../assets/mobile/image-interactive.jpg';
 import image_2 from '../../assets/desktop/image-interactive.jpg';
 export default function SectionOne({ isDevice }) {
   return (
-    <section>
-      <div className="mt-16">
+    <section className="relative 2xl:ml-[10rem]">
+      <div className="mt-16 2xl:flex">
         <div className="flex justify-center px-8 mb-6">
           {isDevice ? (
             <img src={image_1} alt="hero" />
@@ -11,7 +11,7 @@ export default function SectionOne({ isDevice }) {
             <img src={image_2} alt="hero" />
           )}
         </div>
-        <div className="text-center px-7 mb-16">
+        <div className="text-center px-7 mb-16 2xl:w-[40%] 2xl:isDeviceLayout  ">
           <h2 className="uppercase text-[1.8rem] pb-4 font-josefin font-normal">
             the leader in interactive vr
           </h2>

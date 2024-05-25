@@ -49,3 +49,9 @@ ul li {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
 }
+
+@layer base {
+  .isDeviceLayout {
+    @apply absolute bg-white right-[30%] top-[40%]  bottom-[-20%] p-8 px-32;
+  }
+}
