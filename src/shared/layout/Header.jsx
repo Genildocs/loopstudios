@@ -18,7 +18,7 @@ export default function Header({ isMobile }) {
   };
 
   useEffect(() => {
-    document.body.classList.toggle('overflow-hidden');
+    document.body.classList.toggle('overflow-hidden', isOpen);
   }, [isOpen]);
 
   return (
