@@ -10,6 +10,8 @@
 
 body {
   overflow: hidden;
+  min-height: 100vh;
+  background: orchid;
 }
 
 .header-container {
