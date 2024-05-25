@@ -54,4 +54,8 @@ ul li {
   .isDeviceLayout {
     @apply absolute bg-white right-[30%] top-[40%]  bottom-[-20%] p-8 px-32;
   }
+
+  footer div ul li {
+    @apply py-4;
+  }
 }

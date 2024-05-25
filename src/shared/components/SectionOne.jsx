@@ -12,7 +12,7 @@ export default function SectionOne({ isDevice }) {
           )}
         </div>
         <div className="text-center px-7 mb-16 2xl:w-[40%] 2xl:isDeviceLayout  ">
-          <h2 className="uppercase text-[1.8rem] pb-4 font-josefin font-normal">
+          <h2 className="uppercase text-[1.8rem] 2xl:text-[2.5rem] pb-4 font-josefin font-normal 2xl:font-light 2xl:px-4">
             the leader in interactive vr
           </h2>
           <p className="font-alata px-1 opacity-75">
