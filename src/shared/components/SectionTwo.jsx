@@ -1,9 +1,10 @@
+import img from '../../assets/mobile/image-deep-earth.jpg';
 export default function SectionTwo({ isDevice }) {
   const gallery = [
     {
       source: {
-        mobile: './src/assets/mobile/image-deep-earth.jpg',
-        desktop: './src/assets/desktop/image-deep-earth.jpg',
+        mobile: '../../assets/mobile/image-deep-earth.jpg',
+        desktop: '../../assets/desktop/image-deep-earth.jpg',
       },
       name: 'deep earth',
       alt: 'Earth',
