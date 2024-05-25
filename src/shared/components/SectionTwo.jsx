@@ -4,7 +4,7 @@ export default function SectionTwo({ isDevice }) {
     {
       source: {
         mobile: 'src/assets/mobile/image-deep-earth.jpg',
-        desktop: 'src/assets/desktop/image-deep-earth.jpg',
+        desktop: './src/assets/desktop/image-deep-earth.jpg',
       },
       name: 'deep earth',
       alt: 'Earth',
