@@ -34,8 +34,8 @@ export default function Header({ isMobile }) {
         <Menu isMobile={isMobile} />
       </motion.div>
       <div className="pb-10 px-4">
-        <div className="border-4 border-white border-solid p-5 mt-3 ">
-          <h1 className="text-white font-josefin text-[2.8rem] uppercase tracking-wide">
+        <div className="border-4 border-white border-solid p-7 mt-[200px] ">
+          <h1 className="text-white font-normal font-josefin text-[2.5rem] uppercase ">
             Immersive experiences that deliver
           </h1>
         </div>
