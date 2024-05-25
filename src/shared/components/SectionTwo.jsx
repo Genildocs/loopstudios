@@ -2,56 +2,56 @@ export default function SectionTwo({ isDevice }) {
   const gallery = [
     {
       source: {
-        mobile: '/assets/mobile/image-deep-earth.jpg',
-        desktop: '/assets/desktop/image-deep-earth.jpg',
+        mobile: './src/assets/mobile/image-deep-earth.jpg',
+        desktop: './src/assets/desktop/image-deep-earth.jpg',
       },
       name: 'deep earth',
       alt: 'Earth',
     },
     {
       source: {
-        mobile: '/assets/mobile/image-night-arcade.jpg',
-        desktop: '/assets/desktop/image-night-arcade.jpg',
+        mobile: '/src/assets/mobile/image-night-arcade.jpg',
+        desktop: '/src/assets/desktop/image-night-arcade.jpg',
       },
       name: 'night arcade',
       alt: 'Arcade',
     },
     {
       source: {
-        mobile: '/assets/mobile/image-soccer-team.jpg',
-        desktop: '/assets/desktop/image-soccer-team.jpg',
+        mobile: '/src/assets/mobile/image-soccer-team.jpg',
+        desktop: '/src/assets/desktop/image-soccer-team.jpg',
       },
       name: 'soccer team vr',
       alt: 'Soccer',
     },
     {
       source: {
-        mobile: '/assets/mobile/image-grid.jpg',
-        desktop: '/assets/desktop/image-grid.jpg',
+        mobile: '/src/assets/mobile/image-grid.jpg',
+        desktop: '/src/assets/desktop/image-grid.jpg',
       },
       name: 'the grid',
       alt: 'car grid',
     },
     {
       source: {
-        mobile: '/assets/mobile/image-from-above.jpg',
-        desktop: '/assets/desktop/image-from-above.jpg',
+        mobile: '/src/assets/mobile/image-from-above.jpg',
+        desktop: '/src/assets/desktop/image-from-above.jpg',
       },
       name: 'from up above vr',
       alt: 'estrada',
     },
     {
       source: {
-        mobile: '/assets/mobile/image-pocket-borealis.jpg',
-        desktop: '/assets/desktop/image-pocket-borealis.jpg',
+        mobile: '/src/assets/mobile/image-pocket-borealis.jpg',
+        desktop: '/src/assets/desktop/image-pocket-borealis.jpg',
       },
       name: 'pocket borealis',
       alt: 'aurora boreal',
     },
     {
       source: {
-        mobile: '/assets/mobile/image-fisheye.jpg',
-        desktop: '/assets/desktop/image-fisheye.jpg',
+        mobile: '/src/assets/mobile/image-fisheye.jpg',
+        desktop: '/src/assets/desktop/image-fisheye.jpg',
       },
       name: 'Make it fisheye',
       alt: 'fisheye',
