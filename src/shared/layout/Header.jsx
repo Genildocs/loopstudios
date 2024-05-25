@@ -2,9 +2,10 @@ import { delay, motion, useCycle } from 'framer-motion';
 import Menu from '../components/Menu';
 import Logo from '../../assets/logo.svg';
 import BtnToggleHeader from '../components/BtnToggleHeader';
+import { useEffect } from 'react';
 export default function Header({ isMobile }) {
   const [isOpen, toggleOpen] = useCycle(false, true);
-
+  console.log(isOpen);
   const variants = {
     open: {
       width: '100%',
@@ -16,8 +17,12 @@ export default function Header({ isMobile }) {
     },
   };
 
+  useEffect(() => {
+    document.body.classList.toggle('overflow-hidden');
+  }, [isOpen]);
+
   return (
-    <motion.header className="header-container">
+    <motion.header className="header-container xl:px-32 xl:py-10 2xl:px-40 2xl:py-20">
       <motion.div
         className=" flex justify-between items-center "
         initial={false}
@@ -33,9 +38,9 @@ export default function Header({ isMobile }) {
         </motion.div>
         <Menu isMobile={isMobile} />
       </motion.div>
-      <div className="pb-10 px-4">
+      <div className="pb-10 px-4 xl:w-[60%] 2xl:w-[40%]">
         <div className="border-4 border-white border-solid p-7 mt-[200px] ">
-          <h1 className="text-white font-normal font-josefin text-[2.5rem] uppercase ">
+          <h1 className="text-white font-normal font-josefin text-[2.5rem] md:text-[4rem] uppercase ">
             Immersive experiences that deliver
           </h1>
         </div>

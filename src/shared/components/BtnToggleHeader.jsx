@@ -14,6 +14,7 @@ const Path = (props) => (
 export default function BtnToggleHeader({ toggle, isMobile }) {
   return (
     <button
+      aria-label="Toggle Menu"
       onClick={toggle}
       className={`${isMobile ? 'absolute z-50 right-[16px]' : ' hidden '} `}>
       <svg width="30" height="30" viewBox="0 0 23 23">

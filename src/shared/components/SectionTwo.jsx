@@ -58,7 +58,7 @@ export default function SectionTwo({ isDevice }) {
     },
   ];
   return (
-    <section>
+    <section className=" mb-20">
       <div>
         <div className="text-center mb-10">
           <p className="uppercase text-[1.8rem] pb-4 font-josefin font-normal">
@@ -78,6 +78,11 @@ export default function SectionTwo({ isDevice }) {
               </p>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center">
+          <button className="border-2 border-black px-10 py-2 uppercase tracking-widest">
+            <span className="hover:opacity-50">see all</span>
+          </button>
         </div>
       </div>
     </section>
