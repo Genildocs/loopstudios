@@ -1,11 +1,12 @@
-import image_1 from "../../assets/mobile/image-deep-earth.jpg";
+import img_1 from "../../assets/mobile/image-deep-earth.jpg";
+import img_1D from "../../assets/desktop/image-deep-earth.jpg";
 import image_2 from "../../assets/mobile/image-night-arcade.jpg";
 export default function SectionTwo({ isDevice }) {
   const gallery = [
     {
       source: {
-        mobile: [image_1].join(","),
-        desktop: [image_1].join(",").replace("mobile", "desktop"),
+        mobile: [img_1],
+        desktop: [img_1D],
       },
       name: "deep earth",
       alt: "Earth",
@@ -13,8 +14,8 @@ export default function SectionTwo({ isDevice }) {
     },
     {
       source: {
-        mobile: [image_2].join(","),
-        desktop: [image_2].join(",").replace("mobile", "desktop").split(" "),
+        mobile: [image_2],
+        desktop: "[image_2]",
       },
       name: "night arcade",
       alt: "Arcade",
@@ -76,26 +77,21 @@ export default function SectionTwo({ isDevice }) {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 px-8 uppercase">
-          {gallery.map(
-            (elemento, index) => (
-              console.log(elemento.source.desktop),
-              (
-                <div key={index} className="mb-[4rem]">
-                  <picture>
-                    <source
-                      srcSet={elemento.source.desktop}
-                      media="(min-width: 768px)"
-                    />
-                    <img src={elemento.source.mobile} alt={elemento.alt} />
-                  </picture>
+          {gallery.map((elemento, index) => (
+            <div key={index} className="mb-[4rem]">
+              <picture>
+                <source
+                  srcSet={elemento.source.desktop[0]}
+                  media="(min-width: 768px)"
+                />
+                <img src={elemento.source.mobile[0]} alt={elemento.alt} />
+              </picture>
 
-                  <p className="mt-[-60px] ml-5 text-white font-josefin">
-                    {elemento.name}
-                  </p>
-                </div>
-              )
-            )
-          )}
+              <p className="mt-[-60px] ml-5 text-white font-josefin">
+                {elemento.name}
+              </p>
+            </div>
+          ))}
         </div>
         <div className="flex justify-center">
           <button className="border-2 border-black px-10 py-2 uppercase tracking-widest">
