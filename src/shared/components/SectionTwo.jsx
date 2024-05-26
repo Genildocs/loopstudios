@@ -14,7 +14,7 @@ export default function SectionTwo({ isDevice }) {
     {
       source: {
         mobile: [image_2].join(","),
-        desktop: [image_2].join(",").replace("mobile", "desktop"),
+        desktop: [image_2].join(",").replace("mobile", "desktop").split(" "),
       },
       name: "night arcade",
       alt: "Arcade",
@@ -84,7 +84,7 @@ export default function SectionTwo({ isDevice }) {
                   {isDevice ? (
                     <img src={elemento.source.mobile} alt={elemento.alt} />
                   ) : (
-                    <img src={elemento.source.desktop} alt={elemento.alt} />
+                    <img src={elemento.source.desktop[0]} alt={elemento.alt} />
                   )}
 
                   <p className="mt-[-60px] ml-5 text-white font-josefin">
