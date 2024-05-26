@@ -1,6 +1,19 @@
 import img_1 from "../../assets/mobile/image-deep-earth.jpg";
 import img_1D from "../../assets/desktop/image-deep-earth.jpg";
-import image_2 from "../../assets/mobile/image-night-arcade.jpg";
+import img_2 from "../../assets/mobile/image-night-arcade.jpg";
+import img_2D from "../../assets/desktop/image-night-arcade.jpg";
+import img_3 from "../../assets/mobile/image-soccer-team.jpg";
+import img_3D from "../../assets/desktop/image-soccer-team.jpg";
+import img_4 from "../../assets/mobile/image-grid.jpg";
+import img_4D from "../../assets/desktop/image-grid.jpg";
+import img_5 from "../../assets/mobile/image-from-above.jpg";
+import img_5D from "../../assets/desktop/image-from-above.jpg";
+import img_6 from "../../assets/mobile/image-pocket-borealis.jpg";
+import img_6D from "../../assets/desktop/image-pocket-borealis.jpg";
+import img_7 from "../../assets/mobile/image-curiosity.jpg";
+import img_7D from "../../assets/desktop/image-curiosity.jpg";
+import img_8 from "../../assets/mobile/image-fisheye.jpg";
+import img_8D from "../../assets/desktop/image-fisheye.jpg";
 export default function SectionTwo({ isDevice }) {
   const gallery = [
     {
@@ -14,8 +27,8 @@ export default function SectionTwo({ isDevice }) {
     },
     {
       source: {
-        mobile: [image_2],
-        desktop: "[image_2]",
+        mobile: [img_2],
+        desktop: [img_2D],
       },
       name: "night arcade",
       alt: "Arcade",
@@ -23,8 +36,8 @@ export default function SectionTwo({ isDevice }) {
     },
     {
       source: {
-        mobile: "/src/assets/mobile/image-soccer-team.jpg",
-        desktop: "/src/assets/desktop/image-soccer-team.jpg",
+        mobile: [img_3],
+        desktop: [img_3D],
       },
       name: "soccer team vr",
       alt: "Soccer",
@@ -32,8 +45,8 @@ export default function SectionTwo({ isDevice }) {
     },
     {
       source: {
-        mobile: "/src/assets/mobile/image-grid.jpg",
-        desktop: "/src/assets/desktop/image-grid.jpg",
+        mobile: [img_4],
+        desktop: [img_4D],
       },
       name: "the grid",
       alt: "car grid",
@@ -41,8 +54,8 @@ export default function SectionTwo({ isDevice }) {
     },
     {
       source: {
-        mobile: "/src/assets/mobile/image-from-above.jpg",
-        desktop: "/src/assets/desktop/image-from-above.jpg",
+        mobile: [img_5],
+        desktop: [img_5D],
       },
       name: "from up above vr",
       alt: "estrada",
@@ -50,8 +63,8 @@ export default function SectionTwo({ isDevice }) {
     },
     {
       source: {
-        mobile: "/src/assets/mobile/image-pocket-borealis.jpg",
-        desktop: "/src/assets/desktop/image-pocket-borealis.jpg",
+        mobile: [img_6],
+        desktop: [img_6D],
       },
       name: "pocket borealis",
       alt: "aurora boreal",
@@ -59,12 +72,21 @@ export default function SectionTwo({ isDevice }) {
     },
     {
       source: {
-        mobile: "/src/assets/mobile/image-fisheye.jpg",
-        desktop: "/src/assets/desktop/image-fisheye.jpg",
+        mobile: [img_7],
+        desktop: [img_7D],
+      },
+      name: "the curiosity",
+      alt: "curiosity",
+      id: 7,
+    },
+    {
+      source: {
+        mobile: [img_8],
+        desktop: [img_8D],
       },
       name: "Make it fisheye",
       alt: "fisheye",
-      id: 7,
+      id: 8,
     },
   ];
 
