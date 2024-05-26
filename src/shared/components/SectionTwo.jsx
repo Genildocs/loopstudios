@@ -5,7 +5,7 @@ export default function SectionTwo({ isDevice }) {
     {
       source: {
         mobile: [image_1].join(","),
-        desktop: [image_1].join(",").replace("mobile", "desktop").split(" "),
+        desktop: [image_1].join(",").replace("mobile", "desktop"),
       },
       name: "deep earth",
       alt: "Earth",
@@ -81,11 +81,13 @@ export default function SectionTwo({ isDevice }) {
               console.log(elemento.source.desktop),
               (
                 <div key={index} className="mb-[4rem]">
-                  {isDevice ? (
+                  <picture>
+                    <source
+                      srcSet={elemento.source.desktop}
+                      media="(min-width: 768px)"
+                    />
                     <img src={elemento.source.mobile} alt={elemento.alt} />
-                  ) : (
-                    <img src={elemento.source.desktop[0]} alt={elemento.alt} />
-                  )}
+                  </picture>
 
                   <p className="mt-[-60px] ml-5 text-white font-josefin">
                     {elemento.name}
