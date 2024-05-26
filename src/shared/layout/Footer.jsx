@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import Logo from '../../assets/logo.svg';
+import { motion } from "framer-motion";
+import Logo from "../../assets/logo.svg";
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
@@ -24,7 +24,8 @@ export default function Footer() {
             <a href="#">support</a>
           </li>
         </motion.ul>
-        <div className="py-10">
+        <div>social media</div>
+        <div className="py-5">
           <p>&copy; 2021 Loopstudios. All rights reserved</p>
         </div>
       </div>
