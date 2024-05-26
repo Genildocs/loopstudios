@@ -1,10 +1,11 @@
-import Earth from "../../assets/mobile/image-deep-earth.jpg";
+import image_1 from "../../assets/mobile/image-deep-earth.jpg";
+import image_2 from "../../assets/mobile/image-night-arcade.jpg";
 export default function SectionTwo({ isDevice }) {
   const gallery = [
     {
       source: {
-        mobile: { Earth },
-        desktop: "./src/assets/desktop/image-deep-earth.jpg",
+        mobile: [image_1].join(","),
+        desktop: [image_1].join(",").replace("mobile", "desktop"),
       },
       name: "deep earth",
       alt: "Earth",
@@ -12,8 +13,8 @@ export default function SectionTwo({ isDevice }) {
     },
     {
       source: {
-        mobile: "/src/assets/mobile/image-night-arcade.jpg",
-        desktop: "/src/assets/desktop/image-night-arcade.jpg",
+        mobile: [image_2].join(","),
+        desktop: [image_2].join(",").replace("mobile", "desktop"),
       },
       name: "night arcade",
       alt: "Arcade",
@@ -65,7 +66,7 @@ export default function SectionTwo({ isDevice }) {
       id: 7,
     },
   ];
-  console.log(gallery);
+
   return (
     <section className=" mb-20">
       <div>
@@ -77,14 +78,11 @@ export default function SectionTwo({ isDevice }) {
         <div className="grid grid-cols-1 md:grid-cols-4 px-8 uppercase">
           {gallery.map(
             (elemento, index) => (
-              console.log(elemento.source.mobile),
+              console.log(elemento.source.desktop),
               (
                 <div key={index} className="mb-[4rem]">
                   {isDevice ? (
-                    <img
-                      src={elemento.source.mobile.Earth}
-                      alt={elemento.alt}
-                    />
+                    <img src={elemento.source.mobile} alt={elemento.alt} />
                   ) : (
                     <img src={elemento.source.desktop} alt={elemento.alt} />
                   )}
